@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>الموقع الرسمي لقناة عشوائيات برعاية المطور ميدو باشا</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            font-family: Tahoma, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+        }
+        header {
+            background-color: white;
+            border-bottom: 2px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        header img {
+            width: 400px;
+            max-width: 90%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.6);
+        }
+        h1 {
+            color: #d32f2f;
+        }
+        .section {
+            padding: 20px;
+            text-align: center;
+        }
+        .page-box {
+            display: inline-block;
+            width: 150px;
+            background-color: white;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            transition: 0.3s;
+        }
+        .page-box:hover {
+            border-color: #d32f2f;
+            transform: scale(1.05);
+        }
+        .button {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .quiz-question {
+            background-color: #fff;
+            border: 2px solid #d32f2f;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px auto;
+            width: 80%;
+        }
+        footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 15px;
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://i.postimg.cc/1zMn9ntd/An-r80-Vo-NLr-Uw-NJbi-DAo5-9y-Wys-A3rj7-HLDq-I70tv-Pfw8-OHSgt6-RJEy-YFEJSIcd-JI5rjc6lpj-UM00-Dv-Mxjmz-Ee2-IUGKR7grf-Rsz.jpg" alt="لوجو عشوائيات">
+    <h1>الموقع الرسمي لقناة عشوائيات برعاية المطور ميدو باشا</h1>
+</header>
+
+<section class="section">
+    <h2>اختيار الصفحة</h2>
+
+    <div class="page-box">
+        <h3>تيك توك</h3>
+        <a href="https://www.tiktok.com/@aburemden54?is_from_webapp=1&sender_device=pc" target="_blank">
+            <button class="button">اضغط هنا</button>
+        </a>
+    </div>
+
+    <div class="page-box">
+        <h3>واتساب</h3>
+        <a href="https://whatsapp.com/channel/0029Vb0SWtF9RZAWsBo64b40" target="_blank">
+            <button class="button">اضغط هنا</button>
+        </a>
+    </div>
+
+    <div class="page-box">
+        <h3>انستجرام</h3>
+        <a href="https://www.instagram.com/mohmed_ahmed156/" target="_blank">
+            <button class="button">اضغط هنا</button>
+        </a>
+    </div>
+
+    <div class="page-box">
+        <h3>فيسبوك</h3>
+        <a href="https://www.facebook.com/profile.php?id=61572371562838&locale=ar_AR" target="_blank">
+            <button class="button">اضغط هنا</button>
+        </a>
+    </div>
+</section>
+
+<section class="section">
+    <h2>اللعبة الدينية 🧠</h2>
+    <button class="button" onclick="startQuiz()">ابدأ اللعبة</button>
+</section>
+
+<section id="quiz" style="display:none;">
+    <div class="quiz-question">
+        <h3>1- من هو ترجمان القرآن؟</h3>
+        <button class="button" onclick="checkAnswer(this, true)">عبد الله بن عباس</button>
+        <button class="button" onclick="checkAnswer(this, false)">زيد بن ثابت</button>
+        <button class="button" onclick="checkAnswer(this, false)">عبد الله بن مسعود</button>
+        <button class="button" onclick="checkAnswer(this, false)">أبي بن كعب</button>
+    </div>
+
+    <div class="quiz-question">
+        <h3>2- كم عدد الصلوات المفروضة؟</h3>
+        <button class="button" onclick="checkAnswer(this, false)">3</button>
+        <button class="button" onclick="checkAnswer(this, true)">5</button>
+        <button class="button" onclick="checkAnswer(this, false)">7</button>
+        <button class="button" onclick="checkAnswer(this, false)">2</button>
+    </div>
+
+    <div class="quiz-question">
+        <h3>3- من هو خاتم الأنبياء؟</h3>
+        <button class="button" onclick="checkAnswer(this, true)">محمد صلى الله عليه وسلم</button>
+        <button class="button" onclick="checkAnswer(this, false)">موسى عليه السلام</button>
+        <button class="button" onclick="checkAnswer(this, false)">عيسى عليه السلام</button>
+        <button class="button" onclick="checkAnswer(this, false)">إبراهيم عليه السلام</button>
+    </div>
+
+    <div class="quiz-question">
+        <h3>4- ما هي أعظم آية في القرآن؟</h3>
+        <button class="button" onclick="checkAnswer(this, true)">آية الكرسي</button>
+        <button class="button" onclick="checkAnswer(this, false)">الفاتحة</button>
+        <button class="button" onclick="checkAnswer(this, false)">الإخلاص</button>
+        <button class="button" onclick="checkAnswer(this, false)">الناس</button>
+    </div>
+
+    <div class="quiz-question">
+        <h3>5- في أي شهر يصوم المسلمون؟</h3>
+        <button class="button" onclick="checkAnswer(this, true)">رمضان</button>
+        <button class="button" onclick="checkAnswer(this, false)">محرم</button>
+        <button class="button" onclick="checkAnswer(this, false)">شوال</button>
+        <button class="button" onclick="checkAnswer(this, false)">رجب</button>
+    </div>
+
+    <p>مبروك! انتهيت من اللعبة ✅</p>
+</section>
+
+<footer>
+    <p>للتواصل مع المطور ميدو باشا عبر واتساب: <a href="https://wa.me/201124415032" target="_blank">01124415032 📱</a></p>
+</footer>
+
+<script>
+    function startQuiz() {
+        document.getElementById('quiz').style.display = 'block';
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function checkAnswer(button, isCorrect) {
+        if (isCorrect) {
+            button.style.backgroundColor = 'green';
+            alert('✅ إجابة صحيحة');
+        } else {
+            button.style.backgroundColor = 'red';
+            alert('❌ إجابة خاطئة');
+        }
+    }
+</script>
+
+</body>
+</html>
